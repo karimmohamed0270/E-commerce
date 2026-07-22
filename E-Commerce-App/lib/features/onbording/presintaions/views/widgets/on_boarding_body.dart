@@ -49,7 +49,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
           dotsCount: 2,
           // positon only that will link page with the dot
           position: currentPage,
-          decorator: DotsDecorator(
+          decorator: const DotsDecorator(
             color: Colors.grey, // Inactive dots
             activeColor: Colors.green, // Active dot
           ),

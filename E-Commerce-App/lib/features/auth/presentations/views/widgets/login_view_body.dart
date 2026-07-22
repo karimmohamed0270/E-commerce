@@ -6,10 +6,10 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
         children: [
-           CustomTextField(
+          CustomTextField(
             hintText: 'البريد الالكتروني',
             inputtype: TextInputType.emailAddress,
             icon: Icons.email,

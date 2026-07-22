@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 class OnbaordingPageview extends StatelessWidget {
   const OnbaordingPageview({
-    super.key, 
-    required this.pageController, 
+    super.key,
+    required this.pageController,
     required this.currentPage, // 1. Pass the changing state down
   });
 
@@ -16,34 +16,41 @@ class OnbaordingPageview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
-      controller: pageController, 
+      controller: pageController,
       children: [
         // Page 1
         PageViewItem(
           isvisible: true, // Always visible on the first page
           image: Assets.imagePageViewItem1Image,
-          title:  Row(
+          title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('FruitsHub', style: TextStyles.bold23.copyWith(color: Colors.green)),
-              SizedBox(width: 4),
-              Text('مرحبا بك في  تطبيقنا', style: TextStyles.bold23),
+              Text(
+                'FruitsHub',
+                style: TextStyles.bold23.copyWith(color: Colors.green),
+              ),
+              const SizedBox(width: 4),
+              const Text('مرحبا بك في  تطبيقنا', style: TextStyles.bold23),
             ],
           ),
-          description: 'اكتشف تجربة تسوق فريدة ومتطورة اهلا بك هيا لاكتشاف التطبيق ',
+          description:
+              'اكتشف تجربة تسوق فريدة ومتطورة اهلا بك هيا لاكتشاف التطبيق ',
           backgroundColor: Assets.imagePageViewItem1BackgroundImage,
         ),
 
         // Page 2
         PageViewItem(
           isvisible: false,
-          image: Assets.imagePageViewItem1Image, 
-          title:  Row(
+          image: Assets.imagePageViewItem1Image,
+          title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('FruitsHub ', style: TextStyles.bold23.copyWith(color: Colors.green)),
-              SizedBox(width: 4),
-              Text('مرحبا بك في  تطبيقنا', style: TextStyles.bold23),
+              Text(
+                'FruitsHub ',
+                style: TextStyles.bold23.copyWith(color: Colors.green),
+              ),
+              const SizedBox(width: 4),
+              const Text('مرحبا بك في  تطبيقنا', style: TextStyles.bold23),
             ],
           ),
           description: ' هيا بنا لنكتشف التطبيق ',

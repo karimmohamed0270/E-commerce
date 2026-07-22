@@ -48,8 +48,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
         DotsIndicator(
           dotsCount: 2,
           // positon only that will link page with the dot
-          position: currentPage.toDouble(),
-          decorator: DotsDecorator(
+          position: currentPage,
+          decorator: const DotsDecorator(
             color: Colors.grey, // Inactive dots
             activeColor: Colors.green, // Active dot
           ),
@@ -67,7 +67,10 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
               onPressed: () {
                 // Navigate to the login screen
                 Navigator.pushNamed(context, '/login');
-                SharedPreferencesSingleton.setBool('onboarding_completed', true); // Save onboarding completion state
+                SharedPreferencesSingleton.setBool(
+                  'onboarding_completed',
+                  true,
+                ); // Save onboarding completion state
               },
             ),
           ),

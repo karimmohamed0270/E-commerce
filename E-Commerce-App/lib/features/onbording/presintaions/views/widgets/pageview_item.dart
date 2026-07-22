@@ -33,14 +33,11 @@ class PageViewItem extends StatelessWidget {
             padding: const EdgeInsets.only(right: 16.0, top: 16.0),
             child: Visibility(
               visible: isvisible,
-              child: Text(
-                'تخط',
-                style: const TextStyle(fontSize: 16),
-              ),
+              child: const Text('تخط', style: TextStyle(fontSize: 16)),
             ),
           ),
         ),
-        
+
         Stack(
           children: [
             // // Background
@@ -51,7 +48,7 @@ class PageViewItem extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 40),
-        
+
                   Padding(
                     padding: const EdgeInsets.only(top: 60.0),
                     child: SvgPicture.asset(
@@ -60,13 +57,13 @@ class PageViewItem extends StatelessWidget {
                       // fit: BoxFit.contain,
                     ),
                   ),
-        
+
                   const SizedBox(height: 24),
-        
+
                   title,
-        
+
                   const SizedBox(height: 12),
-        
+
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
