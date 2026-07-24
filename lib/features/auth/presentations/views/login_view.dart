@@ -10,7 +10,7 @@ class LoginView extends StatelessWidget {
     return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),
-        child: CustomAppBar(),
+        child: CustomAppBar(text: 'تسجيل الدخول'),
       ),
       body: LoginViewBody(),
     );

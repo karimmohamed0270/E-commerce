@@ -1,16 +1,16 @@
 import 'package:e_commerce/features/auth/presentations/views/login_view.dart';
+import 'package:e_commerce/features/auth/presentations/views/sign_up_view.dart';
 import 'package:e_commerce/features/onbording/presintaions/views/onboarding_screen.dart';
 import 'package:e_commerce/features/splach/presentations/views/spalch_screen.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
-
- static final router = GoRouter(
+  static final router = GoRouter(
     routes: [
       GoRoute(
         // intial screen
-      path: '/',
-      builder: (context, state) => const SplashScreen(),
+        path: '/',
+        builder: (context, state) => const SplashScreen(),
       ),
 
       GoRoute(
@@ -24,7 +24,8 @@ abstract class AppRouter {
         path: '/login',
         builder: (context, state) => const LoginView(),
       ),
+
+      GoRoute(path: '/signup', builder: (context, state) => const SignUpView()),
     ],
   );
-
 }
