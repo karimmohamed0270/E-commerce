@@ -2,12 +2,14 @@ import 'package:dartz/dartz.dart';
 import 'package:e_commerce/core/errors/exceptions.dart';
 import 'package:e_commerce/core/failure/failures.dart';
 import 'package:e_commerce/features/auth/domain/entities/user_entity.dart';
+import 'package:e_commerce/features/auth/domain/repo/auth_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class AuthRepoImp {
+class AuthRepoImp implements AuthRepo {
   final FirebaseAuth firebaseAuth;
   AuthRepoImp({required this.firebaseAuth});
 
+  @override
   Future<Either<Failures, UserEntity>> createUserWithEmailAndPassword({
     required String email,
     required String password,

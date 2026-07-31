@@ -4,7 +4,7 @@ import 'package:e_commerce/features/auth/domain/entities/user_entity.dart';
 
 // method  with email and password1
 abstract class AuthRepo {
-  Future<Either<Failures, UserEntity>> createUserwithEmailAndPassword({
+  Future<Either<Failures, UserEntity>> createUserWithEmailAndPassword({
     required String email,
     required String password,
     required String username,
