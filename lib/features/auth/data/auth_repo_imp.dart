@@ -16,7 +16,7 @@ class AuthRepoImp implements AuthRepo {
     required String username,
   }) async {
     try {
-      final credential = await FirebaseAuth.instance
+      final credential = await firebaseAuth
           .createUserWithEmailAndPassword(email: email, password: password);
       return Right(
         UserEntity(uid: credential.user!.uid, email: email, username: username),
